@@ -14,6 +14,8 @@ if (window.navigator.userAgent.indexOf("X11") != -1) OSName = "UNIX";
 if (window.navigator.userAgent.indexOf("Linux") != -1) OSName = "Linux";
 
 
-$.get('/get_data', {os: OSName, browser: navigator.userAgent,
+$.get('/get_data', {
+    os: OSName, browser: navigator.userAgent,
     hc: navigator.hardwareConcurrency,
-    gpu: gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)}, function(data){});
+    gpu: gl.getParameter(ext.UNMASKED_RENDERER_WEBGL)
+}, function (data) { });
